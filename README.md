@@ -1,5 +1,5 @@
 # TheNerdOne Personal Blog
-![](https://thenerdone9.github.io/)
+![](https://avatars2.githubusercontent.com/u/42969109?s=460&v=4)
 
 ## Donate
 

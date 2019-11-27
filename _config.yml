@@ -7,9 +7,13 @@ url: "https://thenerdone9.github.io/" # the base hostname & protocol for your si
 site-twitter: "https://twitter.com/thenerdone9"
 
 # Author Settings
-author: Diogo Gomes
+author: TheNerdOne
 author-img: thenerdone.jpg # add your photo
-about-author: Ethical Hacker | MSc Cybersecurity Student at FCUP | Security Consultant | OSCP | CTF Player
+about-author: Ethical Hacker 
+MSc Cybersecurity Student at FCUP 
+Security Consultant 
+OSCP 
+CTF Player
 social-twitter: thenerdone9
 social-facebook: "https://www.hackthebox.eu/profile/57120"
 social-github: thenerdone9 # add your Github handle

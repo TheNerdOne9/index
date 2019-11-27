@@ -1,4 +1,4 @@
-title: Hello, I'm the nerdest one!
+title: TheNerdOne Blog
 description: > # this means to ignore newlines until "baseurl:"
   Hacking content, CTF/Exercises writeups, and some personal posts to share some of my ideas.
 permalink: ':title/'

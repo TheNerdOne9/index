@@ -1,4 +1,4 @@
-# TheNerdOne Personal Blog
+# Gh0stPwner Personal Blog
 ![](https://avatars2.githubusercontent.com/u/42969109?s=460&v=4)
 
 ## Donate

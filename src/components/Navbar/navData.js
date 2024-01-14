@@ -1,0 +1,37 @@
+export const navLinks = [
+  
+  {
+    label: 'Services',
+    pathname: '/#service-1',
+  },
+  {
+    label: 'About',
+    pathname: '/#details',
+  },
+  {
+    label: 'Blog',
+    pathname: '/articles',
+  },
+  {
+    label: 'Contact',
+    pathname: '/contact',
+  },
+];
+
+export const socialLinks = [
+  {
+    label: 'Twitter',
+    url: 'https://twitter.com/ghostpwner',
+    icon: 'twitter',
+  },
+  {
+    label: 'Github',
+    url: 'https://github.com/gh0stpwner',
+    icon: 'github',
+  },
+  {
+    label: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/diogo-salvador/',
+    icon: 'linkedin',
+  },
+];

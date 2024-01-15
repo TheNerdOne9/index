@@ -16,7 +16,7 @@ import { formatDate } from 'utils/date';
 import { classes, cssProps } from 'utils/style';
 import styles from './Articles.module.css';
 import Script from "next/script";
-const GA_MEASUREMENT_ID = process.env.GA4_KEY;
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA4_KEY;
 
 const ArticlesPost = ({
   slug,

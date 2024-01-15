@@ -18,7 +18,7 @@ import { ServiceSummary } from 'layouts/Home/ServiceSummary';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 import Script from "next/script";
-const GA_MEASUREMENT_ID = process.env.GA4_KEY;
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA4_KEY;
 const disciplines = ['DevSecOps', 'Pentest', 'Red Team', ' CTI', 'Training'];
 
 

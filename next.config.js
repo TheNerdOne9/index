@@ -34,6 +34,11 @@ module.exports = {
       type: 'asset/source',
     });
 
+    //Load environmental secrets 
+    env: {
+      GA_MEASUREMENT_ID: process.env.NEXT_PUBLIC_GA4_KEY
+    }
+
     return config;
   },
 };

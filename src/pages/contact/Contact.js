@@ -13,7 +13,6 @@ import { useRef , useState } from 'react';
 import { cssProps, msToNum, numToMs } from 'utils/style';
 import styles from './Contact.module.css';
 import Script from "next/script";
-const GA_MEASUREMENT_ID = process.env.GA4_KEY;
 
 export const Contact = () => {
   const errorRef = useRef();
@@ -21,18 +20,19 @@ export const Contact = () => {
   const [complete] = useState(false);
   const [statusError] = useState('');
   const initDelay = tokens.base.durationS;
+  const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA4_KEY;
+  console.log(GA_MEASUREMENT_ID);
 
   return (
     <Section className={styles.contact}>
       <Meta
         title="Contact"
         description="Send me a message if you’re interested in discussing a Service or if you just want to say hi"
-      />
-      
-<Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+      ></Meta>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=`+GA_MEASUREMENT_ID}
         strategy="afterInteractive"
-      />
+      ></Script>
       <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];

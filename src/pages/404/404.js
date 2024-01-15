@@ -9,7 +9,7 @@ import { Transition } from 'components/Transition';
 import { Fragment } from 'react';
 import styles from './404.module.css';
 import Script from "next/script";
-const GA_MEASUREMENT_ID = process.env.GA4_KEY;
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA4_KEY;
 
 export function Page404() {
   return (

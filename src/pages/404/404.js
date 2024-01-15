@@ -8,6 +8,8 @@ import { Text } from 'components/Text';
 import { Transition } from 'components/Transition';
 import { Fragment } from 'react';
 import styles from './404.module.css';
+import Script from "next/script";
+const GA_MEASUREMENT_ID = process.env.GA4_KEY;
 
 export function Page404() {
   return (
@@ -16,6 +18,18 @@ export function Page404() {
         title="404 Not Found"
         description="404 page not found. This page doesn't exist"
       />
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_MEASUREMENT_ID}');
+        `}
+      </Script>
       <Transition in>
         {visible => (
           <Fragment>

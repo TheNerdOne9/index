@@ -12,6 +12,8 @@ import { Transition } from 'components/Transition';
 import { useRef , useState } from 'react';
 import { cssProps, msToNum, numToMs } from 'utils/style';
 import styles from './Contact.module.css';
+import Script from "next/script";
+const GA_MEASUREMENT_ID = process.env.GA4_KEY;
 
 export const Contact = () => {
   const errorRef = useRef();
@@ -26,6 +28,19 @@ export const Contact = () => {
         title="Contact"
         description="Send me a message if you’re interested in discussing a Service or if you just want to say hi"
       />
+      
+<Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_MEASUREMENT_ID}');
+        `}
+      </Script>
       <Transition unmount in={!complete} timeout={1600}>
         {(visible, status) => (
           <form className={styles.form}>

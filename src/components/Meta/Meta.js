@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Script from "next/script";
+const GA_MEASUREMENT_ID = process.env.GA4_KEY;
 
 const siteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
 const name = 'Diogo Salvador';
@@ -33,5 +35,6 @@ export const Meta = ({ title, description, prefix = name, ogImage = defaultOgIma
       <meta name="twitter:creator" content={twitterHandle} />
       <meta name="twitter:image" content={ogImage} />
     </Head>
+    
   );
 };

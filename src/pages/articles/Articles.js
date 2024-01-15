@@ -15,6 +15,8 @@ import { useState, useEffect } from 'react';
 import { formatDate } from 'utils/date';
 import { classes, cssProps } from 'utils/style';
 import styles from './Articles.module.css';
+import Script from "next/script";
+const GA_MEASUREMENT_ID = process.env.GA4_KEY;
 
 const ArticlesPost = ({
   slug,
@@ -178,6 +180,19 @@ export const Articles = ({ posts, featured }) => {
         title="Articles"
         description="A collection of technical design and development articles. May contain incoherent ramblings."
       />
+
+<Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_MEASUREMENT_ID}');
+        `}
+      </Script>
       <Section className={styles.content}>
         {!isSingleColumn && (
           <div className={styles.grid}>

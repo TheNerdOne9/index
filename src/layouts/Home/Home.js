@@ -17,8 +17,11 @@ import { Profile } from 'layouts/Home/Profile';
 import { ServiceSummary } from 'layouts/Home/ServiceSummary';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
-
+import Script from "next/script";
+const GA_MEASUREMENT_ID = process.env.GA4_KEY;
 const disciplines = ['DevSecOps', 'Pentest', 'Red Team', ' CTI', 'Training'];
+
+
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -69,9 +72,23 @@ export const Home = () => {
     <div className={styles.home}>
       <Meta
         title="Cyber Security"
-        description="Design portfolio of Hamish Williams — a product designer working on web & mobile
+        description="Portfolio of Diogo Salvador — a product designer working on web & mobile
           apps with a focus on motion, experience design, and accessibility."
+      >
+      </Meta>
+
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        strategy="afterInteractive"
       />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_MEASUREMENT_ID}');
+        `}
+      </Script>
       <Intro
         id="intro"
         sectionRef={intro}

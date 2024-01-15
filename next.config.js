@@ -36,7 +36,8 @@ module.exports = {
 
     //Load environmental secrets 
     env: {
-      GA_MEASUREMENT_ID: process.env.NEXT_PUBLIC_GA4_KEY
+      GA_MEASUREMENT_ID: process.env.NEXT_PUBLIC_GA4_KEY;
+      NEXT_PUBLIC_WEBSITE_URL: process.env.NEXT_PUBLIC_WEBSITE_URL
     }
 
     return config;

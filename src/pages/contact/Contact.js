@@ -4,24 +4,20 @@ import { Divider } from 'components/Divider';
 import { Footer } from 'components/Footer';
 import { Heading } from 'components/Heading';
 import { Icon } from 'components/Icon';
-import { Input } from 'components/Input';
 import { Meta } from 'components/Meta';
 import { Section } from 'components/Section';
 import { Text } from 'components/Text';
 import { tokens } from 'components/ThemeProvider/theme';
 import { Transition } from 'components/Transition';
-import { useFormInput } from 'hooks';
-import { useRef, useState } from 'react';
+import { useRef , useState } from 'react';
 import { cssProps, msToNum, numToMs } from 'utils/style';
 import styles from './Contact.module.css';
 
 export const Contact = () => {
   const errorRef = useRef();
-  const email = useFormInput('');
-  const message = useFormInput('');
-  const [sending, setSending] = useState(false);
-  const [complete, setComplete] = useState(false);
-  const [statusError, setStatusError] = useState('');
+  const [sending] = useState(false);
+  const [complete] = useState(false);
+  const [statusError] = useState('');
   const initDelay = tokens.base.durationS;
 
   return (
@@ -47,9 +43,9 @@ export const Contact = () => {
               data-status={status}
               style={getDelay(tokens.base.durationXS, initDelay, 0.4)}
             />
-              <Text> In today's interconnected world, cybersecurity is more important than ever and i can help you assess your current security posture, identify vulnerabilities, and implement effective security measures to protect 
-                your business from cyberattacks. Whether you're a small business or a large enterprise, i have the resources needed to help you safeguard your data and systems.</Text>
-                <Text> Let's get in touch.</Text>
+              <Text> In today&apos;s interconnected world, cybersecurity is more important than ever and i can help you assess your current security posture, identify vulnerabilities, and implement effective security measures to protect 
+                your business from cyberattacks. Whether you&apos;re a small business or a large enterprise, i have the resources needed to help you safeguard your data and systems.</Text>
+                <Text> Let&apos;s get in touch.</Text>
             <Transition in={statusError} timeout={msToNum(tokens.base.durationM)}>
               {errorStatus => (
                 <div

@@ -16,6 +16,8 @@ import { formatDate } from 'utils/date';
 import { classes, cssProps } from 'utils/style';
 import styles from './Articles.module.css';
 import Script from "next/script";
+import { randomBytes } from 'crypto';
+const nonce = randomBytes(128).toString('base64');
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA4_KEY;
 
 const ArticlesPost = ({
@@ -184,8 +186,9 @@ export const Articles = ({ posts, featured }) => {
 <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         strategy="afterInteractive"
+        nonce={nonce}
       />
-      <Script id="google-analytics" strategy="afterInteractive">
+      <Script id="google-analytics" strategy="afterInteractive" nonce={nonce}>
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}

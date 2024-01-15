@@ -22,6 +22,8 @@ import { cleanRenderer, cleanScene, removeLights } from 'utils/three';
 import styles from './DisplacementSphere.module.css';
 import fragShader from './displacementSphereFragment.glsl';
 import vertShader from './displacementSphereVertex.glsl';
+import { randomBytes } from 'crypto';
+const nonce = randomBytes(128).toString('base64');
 
 const springConfig = {
   stiffness: 30,
@@ -185,6 +187,7 @@ export const DisplacementSphere = props => {
   }, [isInViewport, reduceMotion, rotationX, rotationY]);
 
   return (
+    
     <Transition in timeout={3000}>
       {visible => (
         <canvas

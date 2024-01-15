@@ -3,10 +3,13 @@ import GothamMedium from 'assets/fonts/gotham-medium.woff2';
 import { fontStyles, tokenStyles } from 'components/ThemeProvider';
 import { Head, Html, Main, NextScript } from 'next/document';
 
+import { randomBytes } from 'crypto';
+const nonce = randomBytes(128).toString('base64');
+
 export default function Document() {
   return (
     <Html lang="en">
-      <Head>
+      <Head nonce={nonce}>
         <meta charSet="utf-8" />
 
         <link rel="manifest" href="/manifest.json" />
@@ -20,7 +23,7 @@ export default function Document() {
         <style dangerouslySetInnerHTML={{ __html: tokenStyles }} />
       </Head>
       <body data-theme="dark" tabIndex={-1}>
-        <script
+        <script nonce={nonce}
           dangerouslySetInnerHTML={{
             __html: `
               const initialTheme = JSON.parse(localStorage.getItem('theme'));

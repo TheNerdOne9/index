@@ -1,22 +1,21 @@
 import Head from 'next/head';
-import { randomBytes } from 'crypto';
 
 const siteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
 const name = 'Diogo Salvador';
 const twitterHandle = '@ghostpwner';
 const defaultOgImage = `${siteUrl}/social-image.png`;
+import { randomBytes } from 'crypto';
 const nonce = randomBytes(128).toString('base64');
+/*https://github.com/vercel/next.js/issues/43743 -> NextJS depends on unsafe-inline on script-src.*/
 const cspHeader = `
     default-src 'self' https://*.google-analytics.com https://*.googletagmanager.com;
-    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com;
+    script-src 'unsafe-eval' 'unsafe-inline' http://localhost:3000 https://*.googletagmanager.com blob:;
     style-src 'self' 'unsafe-inline';
     img-src 'self' blob: data: https://*.google-analytics.com https://*.googletagmanager.com;
-    connect-src: https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com;
     font-src 'self';
-    object-src 'none';
+    object-src 'self' blob:;
     base-uri 'self';
     form-action 'self';
-    frame-ancestors 'none';
     block-all-mixed-content;
     upgrade-insecure-requests;
 `;

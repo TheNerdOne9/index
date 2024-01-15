@@ -11,6 +11,8 @@ import { createContext, useEffect } from 'react';
 import { classes, media } from 'utils/style';
 import { theme, tokens } from './theme';
 import { useTheme } from './useTheme';
+import { randomBytes } from 'crypto';
+const nonce = randomBytes(128).toString('base64');
 
 export const ThemeContext = createContext({});
 
@@ -39,7 +41,7 @@ export const ThemeProvider = ({
     <ThemeContext.Provider value={currentTheme}>
       {isRootProvider && (
         <>
-          <Head>
+          <Head nonce={nonce}>
             <meta name="theme-color" content={`rgb(${currentTheme.rgbBackground})`} />
           </Head>
           {children}

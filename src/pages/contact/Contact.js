@@ -13,6 +13,8 @@ import { useRef , useState } from 'react';
 import { cssProps, msToNum, numToMs } from 'utils/style';
 import styles from './Contact.module.css';
 import Script from "next/script";
+import { randomBytes } from 'crypto';
+const nonce = randomBytes(128).toString('base64');
 
 export const Contact = () => {
   const errorRef = useRef();
@@ -29,11 +31,12 @@ export const Contact = () => {
         title="Contact"
         description="Send me a message if you’re interested in discussing a Service or if you just want to say hi"
       ></Meta>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=`+GA_MEASUREMENT_ID}
+<Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         strategy="afterInteractive"
-      ></Script>
-      <Script id="google-analytics" strategy="afterInteractive">
+        nonce={nonce}
+      />
+      <Script id="google-analytics" strategy="afterInteractive" nonce={nonce}>
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}

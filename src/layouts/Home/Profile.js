@@ -21,17 +21,13 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Diogo, currently I live in Portugal working as a application security engineer at{' '}
-      <Link href="https://www.euronext.com">Euronext</Link>. My Services include UX design, UI
-      animations, and icon illustration. Being comfortable with code allows me to rapidly
-      prototype and validate experiences. If you’re interested in the tools and software I
-      use check out my <Link href="/uses">uses page</Link>.
-    </Text>
-    <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
-      <Link href="/services/volkihar-knight">make mods</Link>. I’m always down for hearing
-      about new Services, so feel free to drop me a line.
-    </Text>
+    In the vast expanse of cyberspace, I'm the mischievous elf, the code-wielding maestro, the cybersecurity whiz who turns vulnerabilities into punchlines. I'm a certified cybersecurity consultant with a knack for transforming digital defenses into impenetrable fortresses, all while cracking jokes with the same proficiency I crack codes.
+    </Text><Text className={styles.description} data-visible={visible} size="l" as="p">
+As a DevSecOps enthusiast, I'll weave security enchantments into your development processes, ensuring your systems are magically immune to cyber threats from the very start. My red team expertise is as meticulously as a ninja to probe your defenses, exposing every chink in your armor before the real hackers do.
+</Text><Text className={styles.description} data-visible={visible} size="l" as="p">
+Penetration testing? It's my playground. I'll relentlessly attack your systems, exposing every weakness and vulnerability, leaving you with a comprehensive roadmap for fortification that's as hilarious as it is effective. My training programs are designed to transform mere mortals into cybersecurity superheroes, equipping them with the knowledge and skills to protect their digital kingdoms from the clutches of cyber villains.
+</Text><Text className={styles.description} data-visible={visible} size="l" as="p">
+But wait, there's more! I'm also launching my freelancing service, bringing my cybersecurity expertise to your doorstep. Whether you're a small business or a large enterprise, I'm ready to help you secure your digital realm with a dash of geeky humor and a whole lot of cybersecurity prowess. So, don't let hackers laugh their way to your digital bank account – contact me today and let's turn the tables on those cyber-bullies! </Text>
   </Fragment>
 );
 
@@ -59,7 +55,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 secondary
                 className={styles.button}
                 data-visible={visible}
-                href="mailto:pwnerghost@gmail.com"
+                href="/contact"
                 icon="send"
               >
                 Send me a message

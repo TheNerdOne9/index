@@ -107,26 +107,26 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                 </div>
               </Heading>
             </header>
-            <RouterLink href="/#service-1">
-              <a
-                className={styles.scrollIndicator}
-                data-status={status}
-                data-hidden={scrollIndicatorHidden}
-                onClick={handleScrollClick}
-              >
-                <VisuallyHidden>Scroll to services</VisuallyHidden>
-              </a>
+            <RouterLink
+              href="/#details"
+              className={styles.scrollIndicator}
+              data-status={status}
+              data-hidden={scrollIndicatorHidden}
+              onClick={handleScrollClick}>
+
+              <VisuallyHidden>Scroll to details</VisuallyHidden>
+
             </RouterLink>
-            <RouterLink href="/#service-1">
-              <a
-                className={styles.mobileScrollIndicator}
-                data-status={status}
-                data-hidden={scrollIndicatorHidden}
-                onClick={handleScrollClick}
-              >
-                <VisuallyHidden>Scroll to services</VisuallyHidden>
-                <ArrowDown aria-hidden />
-              </a>
+            <RouterLink
+              href="/#details"
+              className={styles.mobileScrollIndicator}
+              data-status={status}
+              data-hidden={scrollIndicatorHidden}
+              onClick={handleScrollClick}>
+
+              <VisuallyHidden>Scroll to details</VisuallyHidden>
+              <ArrowDown aria-hidden />
+
             </RouterLink>
           </Fragment>
         )}

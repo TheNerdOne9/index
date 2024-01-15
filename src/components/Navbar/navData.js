@@ -1,12 +1,12 @@
 export const navLinks = [
   
   {
-    label: 'Services',
-    pathname: '/#service-1',
-  },
-  {
     label: 'About',
     pathname: '/#details',
+  },
+  {
+    label: 'Services',
+    pathname: '/#service-1',
   },
   {
     label: 'Blog',

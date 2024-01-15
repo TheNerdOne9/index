@@ -18,7 +18,7 @@ import { ServiceSummary } from 'layouts/Home/ServiceSummary';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 
-const disciplines = ['DevSecOps','Pentest', 'Red Team', 'Bug Bounty', 'Threat Hunting', 'Training'];
+const disciplines = ['DevSecOps', 'Pentest', 'Red Team', ' CTI', 'Training'];
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -78,12 +78,17 @@ export const Home = () => {
         disciplines={disciplines}
         scrollIndicatorHidden={scrollIndicatorHidden}
       />
+      <Profile
+        sectionRef={details}
+        visible={visibleSections.includes(details.current)}
+        id="details"
+      />
       <ServiceSummary
         id="service-1"
         sectionRef={ServiceOne}
         visible={visibleSections.includes(ServiceOne.current)}
         index={1}
-        title="Designing the future of education"
+        title="DevSecOps Engineering"
         description="Designing a platform to help educators build better online courseware"
         buttonText="View Service"
         buttonLink="/services/smart-sparrow"
@@ -104,7 +109,7 @@ export const Home = () => {
         sectionRef={ServiceTwo}
         visible={visibleSections.includes(ServiceTwo.current)}
         index={2}
-        title="Video game progress tracking"
+        title="Penetration Testing"
         description="Design and development for a video game tracking app built in React Native"
         buttonText="View website"
         buttonLink="https://"
@@ -128,7 +133,7 @@ export const Home = () => {
         sectionRef={ServiceThree}
         visible={visibleSections.includes(ServiceThree.current)}
         index={3}
-        title="Biomedical image collaboration"
+        title="Red Team"
         description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
         buttonText="View Service"
         buttonLink="/services/slice"
@@ -143,10 +148,67 @@ export const Home = () => {
           ],
         }}
       />
-      <Profile
-        sectionRef={details}
-        visible={visibleSections.includes(details.current)}
-        id="details"
+      <ServiceSummary
+        id="service-4"
+        alternate
+        sectionRef={ServiceThree}
+        visible={visibleSections.includes(ServiceThree.current)}
+        index={4}
+        title="Threat Hunting"
+        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        buttonText="View Service"
+        buttonLink="/services/slice"
+        model={{
+          type: 'laptop',
+          alt: 'Annotating a biomedical image in the Slice app',
+          textures: [
+            {
+              srcSet: [sliceTexture, sliceTextureLarge],
+              placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ServiceSummary
+        id="service-5"
+        sectionRef={ServiceThree}
+        visible={visibleSections.includes(ServiceThree.current)}
+        index={3}
+        title="Training & Awareness"
+        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        buttonText="View Service"
+        buttonLink="/services/slice"
+        model={{
+          type: 'laptop',
+          alt: 'Annotating a biomedical image in the Slice app',
+          textures: [
+            {
+              srcSet: [sliceTexture, sliceTextureLarge],
+              placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ServiceSummary
+        id="service-3"
+        alternate
+        sectionRef={ServiceThree}
+        visible={visibleSections.includes(ServiceThree.current)}
+        index={3}
+        title="Bug Bounty Program Management"
+        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        buttonText="View Service"
+        buttonLink="/services/slice"
+        model={{
+          type: 'laptop',
+          alt: 'Annotating a biomedical image in the Slice app',
+          textures: [
+            {
+              srcSet: [sliceTexture, sliceTextureLarge],
+              placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
       />
       <Footer />
     </div>

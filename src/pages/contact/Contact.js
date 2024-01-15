@@ -24,45 +24,6 @@ export const Contact = () => {
   const [statusError, setStatusError] = useState('');
   const initDelay = tokens.base.durationS;
 
-  const onSubmit = async event => {
-    event.preventDefault();
-    setStatusError('');
-
-    if (sending) return;
-
-    try {
-      setSending(true);
-
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/message`, {
-        method: 'POST',
-        mode: 'cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: email.value,
-          message: message.value,
-        }),
-      });
-
-      const responseMessage = await response.json();
-
-      const statusError = getStatusError({
-        status: response?.status,
-        errorMessage: responseMessage?.error,
-        fallback: 'There was a problem sending your message',
-      });
-
-      if (statusError) throw new Error(statusError);
-
-      setComplete(true);
-      setSending(false);
-    } catch (error) {
-      setSending(false);
-      setStatusError(error.message);
-    }
-  };
-
   return (
     <Section className={styles.contact}>
       <Meta
@@ -71,7 +32,7 @@ export const Contact = () => {
       />
       <Transition unmount in={!complete} timeout={1600}>
         {(visible, status) => (
-          <form className={styles.form} method="post" onSubmit={onSubmit}>
+          <form className={styles.form}>
             <Heading
               className={styles.title}
               data-status={status}
@@ -79,35 +40,16 @@ export const Contact = () => {
               as="h1"
               style={getDelay(tokens.base.durationXS, initDelay, 0.3)}
             >
-              <DecoderText text="Say hello" start={status !== 'exited'} delay={300} />
+              <DecoderText text="Worried about cyber threats targeting your business?" start={status !== 'exited'} delay={300} />
             </Heading>
             <Divider
               className={styles.divider}
               data-status={status}
               style={getDelay(tokens.base.durationXS, initDelay, 0.4)}
             />
-            <Input
-              required
-              className={styles.input}
-              data-status={status}
-              style={getDelay(tokens.base.durationXS, initDelay)}
-              autoComplete="email"
-              label="Your Email"
-              type="email"
-              maxLength={512}
-              {...email}
-            />
-            <Input
-              required
-              multiline
-              className={styles.input}
-              data-status={status}
-              style={getDelay(tokens.base.durationS, initDelay)}
-              autoComplete="off"
-              label="Message"
-              maxLength={4096}
-              {...message}
-            />
+              <Text> In today's interconnected world, cybersecurity is more important than ever and i can help you assess your current security posture, identify vulnerabilities, and implement effective security measures to protect 
+                your business from cyberattacks. Whether you're a small business or a large enterprise, i have the resources needed to help you safeguard your data and systems.</Text>
+                <Text> Let's get in touch.</Text>
             <Transition in={statusError} timeout={msToNum(tokens.base.durationM)}>
               {errorStatus => (
                 <div
@@ -127,78 +69,33 @@ export const Contact = () => {
               )}
             </Transition>
             <Button
+              secondary
               className={styles.button}
               data-status={status}
               data-sending={sending}
-              style={getDelay(tokens.base.durationM, initDelay)}
-              disabled={sending}
-              loading={sending}
-              loadingText="Sending..."
+              href="mailto:pwnerghost@gmail.com"
               icon="send"
-              type="submit"
             >
-              Send message
-            </Button>
-          </form>
-        )}
-      </Transition>
-      <Transition unmount in={complete}>
-        {(visible, status) => (
-          <div className={styles.complete} aria-live="polite">
-            <Heading
-              level={3}
-              as="h3"
-              className={styles.completeTitle}
-              data-status={status}
-            >
-              Message Sent
-            </Heading>
-            <Text
-              size="l"
-              as="p"
-              className={styles.completeText}
-              data-status={status}
-              style={getDelay(tokens.base.durationXS)}
-            >
-              I’ll get back to you within a couple days, sit tight
-            </Text>
+              E-mail
+            </Button> 
+              <Text/>
             <Button
               secondary
-              iconHoverShift
-              className={styles.completeButton}
+              className={styles.button}
               data-status={status}
-              style={getDelay(tokens.base.durationM)}
-              href="/"
-              icon="chevronRight"
+              data-sending={sending}
+              href="https://discordapp.com/users/295566675766411267"
+              icon="send"
             >
-              Back to homepage
+              Discord  
             </Button>
-          </div>
+          </form>
         )}
       </Transition>
       <Footer className={styles.footer} />
     </Section>
   );
 };
-
-function getStatusError({
-  status,
-  errorMessage,
-  fallback = 'There was a problem with your request',
-}) {
-  if (status === 200) return false;
-
-  const statuses = {
-    500: 'There was a problem with the server, try again later',
-    404: 'There was a problem connecting to the server. Make sure you are connected to the internet',
-  };
-
-  if (errorMessage) {
-    return errorMessage;
-  }
-
-  return statuses[status] || fallback;
-}
 
 function getDelay(delayMs, offset = numToMs(0), multiplier = 1) {
   const numDelay = msToNum(delayMs) * multiplier;

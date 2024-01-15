@@ -20,5 +20,5 @@ export const deviceModels = {
     height: 800,
     position: { x: 0, y: 0, z: 0 },
     animation: ModelAnimationType.LaptopOpen,
-  },
+  }
 };

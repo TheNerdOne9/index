@@ -73,8 +73,7 @@ export const Home = () => {
     <div className={styles.home}>
       <Meta
         title="Cyber Security"
-        description="Portfolio of Diogo Salvador — a product designer working on web & mobile
-          apps with a focus on motion, experience design, and accessibility."
+        description="Cyber Security website presentation for a freelancer hacker called Diogo Salvador aka Ghostpwner."
       >
       </Meta>
 

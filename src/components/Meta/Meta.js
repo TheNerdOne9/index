@@ -7,10 +7,11 @@ const twitterHandle = '@ghostpwner';
 const defaultOgImage = `${siteUrl}/social-image.png`;
 const nonce = randomBytes(128).toString('base64');
 const cspHeader = `
-    default-src 'self';
-    script-src 'self' 'nonce-${nonce}' 'strict-dynamic';
-    style-src 'self' 'nonce-${nonce}';
-    img-src 'self' blob: data:;
+    default-src 'self' https://*.google-analytics.com https://*.googletagmanager.com;
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com;
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' blob: data: https://*.google-analytics.com https://*.googletagmanager.com;
+    connect-src: https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com;
     font-src 'self';
     object-src 'none';
     base-uri 'self';

@@ -9,7 +9,7 @@ const nonce = randomBytes(128).toString('base64');
 /*https://github.com/vercel/next.js/issues/43743 -> NextJS depends on unsafe-inline on script-src.*/
 const cspHeader = `
     default-src 'self' https://*.google-analytics.com https://*.googletagmanager.com;
-    script-src 'unsafe-eval' 'unsafe-inline' http://localhost:3000 https://*.googletagmanager.com blob:;
+    script-src 'unsafe-eval' 'unsafe-inline' http://localhost:3000 http://ghostpwner.xyz https://*.googletagmanager.com blob:;
     style-src 'self' 'unsafe-inline';
     img-src 'self' blob: data: https://*.google-analytics.com https://*.googletagmanager.com;
     font-src 'self';

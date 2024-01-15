@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import { randomBytes } from 'crypto'
+import { randomBytes } from 'crypto';
 
 const siteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
 const name = 'Diogo Salvador';
 const twitterHandle = '@ghostpwner';
 const defaultOgImage = `${siteUrl}/social-image.png`;
-const nonce = randomBytes(128).toString('base64')
+const nonce = randomBytes(128).toString('base64');
 const cspHeader = `
     default-src 'self';
     script-src 'self' 'nonce-${nonce}' 'strict-dynamic';
@@ -18,7 +18,7 @@ const cspHeader = `
     frame-ancestors 'none';
     block-all-mixed-content;
     upgrade-insecure-requests;
-`
+`;
 
 export const Meta = ({ title, description, prefix = name, ogImage = defaultOgImage }) => {
   const titleText = [prefix, title].filter(Boolean).join(' | ');

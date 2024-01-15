@@ -1,17 +1,31 @@
 import Head from 'next/head';
-import Script from "next/script";
-const GA_MEASUREMENT_ID = process.env.GA4_KEY;
+import { randomBytes } from 'crypto'
 
 const siteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
 const name = 'Diogo Salvador';
 const twitterHandle = '@ghostpwner';
 const defaultOgImage = `${siteUrl}/social-image.png`;
+const nonce = randomBytes(128).toString('base64')
+const cspHeader = `
+    default-src 'self';
+    script-src 'self' 'nonce-${nonce}' 'strict-dynamic';
+    style-src 'self' 'nonce-${nonce}';
+    img-src 'self' blob: data:;
+    font-src 'self';
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+    frame-ancestors 'none';
+    block-all-mixed-content;
+    upgrade-insecure-requests;
+`
 
 export const Meta = ({ title, description, prefix = name, ogImage = defaultOgImage }) => {
   const titleText = [prefix, title].filter(Boolean).join(' | ');
-
+  
   return (
-    <Head>
+    <Head nonce={nonce}>
+      <meta httpEquiv="Content-Security-Policy" content={cspHeader} />
       <title key="title">{titleText}</title>
       <meta key="description" name="description" content={description} />
       <meta name="author" content={name} />

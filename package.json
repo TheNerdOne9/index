@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "homepage": "https://ghostpwner.xyz",
-  "description": "Cyber Security website presentation for a freelancer hacker called Diogo Salvador aka Ghostpwner.",
+  "description": "Find the a cybersecurity solution to protect your business's data and systems from getting hacked.",
   "repository": "https://github.com/gh0stpwner/gh0stpwner.github.io",
   "author": "Diogo Salvador <pwnerghost@gmail.com>",
   "devDependencies": {

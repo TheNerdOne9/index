@@ -34,7 +34,7 @@ export const Home = () => {
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, ServiceOne, ServiceTwo, ServiceThree, details];
+    const sections = [intro, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -73,11 +73,9 @@ export const Home = () => {
     <div className={styles.home}>
       <Meta
         title="Cyber Security"
-        description="Cyber Security website presentation for a freelancer hacker called Diogo Salvador aka Ghostpwner."
+        description="Find the a cybersecurity solution to protect your business's data and systems from getting hacked."
       >
       </Meta>
-
-      
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         strategy="afterInteractive"
@@ -101,133 +99,6 @@ export const Home = () => {
         sectionRef={details}
         visible={visibleSections.includes(details.current)}
         id="details"
-      />
-      <ServiceSummary
-        id="service-1"
-        sectionRef={ServiceOne}
-        visible={visibleSections.includes(ServiceOne.current)}
-        index={1}
-        title="DevSecOps Engineering"
-        description="Designing a platform to help educators build better online courseware"
-        buttonText="View Service"
-        buttonLink="/services/smart-sparrow"
-        model={{
-          type: 'laptop',
-          alt: 'Smart Sparrow lesson builder',
-          textures: [
-            {
-              srcSet: [sprTexture, sprTextureLarge],
-              placeholder: sprTexturePlaceholder,
-            },
-          ],
-        }}
-      />
-      <ServiceSummary
-        id="service-2"
-        alternate
-        sectionRef={ServiceTwo}
-        visible={visibleSections.includes(ServiceTwo.current)}
-        index={2}
-        title="Penetration Testing"
-        description="Design and development for a video game tracking app built in React Native"
-        buttonText="View website"
-        buttonLink="https://"
-        model={{
-          type: 'phone',
-          alt: 'App login screen',
-          textures: [
-            {
-              srcSet: [gamestackTexture, gamestackTextureLarge],
-              placeholder: gamestackTexturePlaceholder,
-            },
-            {
-              srcSet: [gamestackTexture2, gamestackTexture2Large],
-              placeholder: gamestackTexture2Placeholder,
-            },
-          ],
-        }}
-      />
-      <ServiceSummary
-        id="service-3"
-        sectionRef={ServiceThree}
-        visible={visibleSections.includes(ServiceThree.current)}
-        index={3}
-        title="Red Team"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
-        buttonText="View Service"
-        buttonLink="/services/slice"
-        model={{
-          type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
-          textures: [
-            {
-              srcSet: [sliceTexture, sliceTextureLarge],
-              placeholder: sliceTexturePlaceholder,
-            },
-          ],
-        }}
-      />
-      <ServiceSummary
-        id="service-4"
-        alternate
-        sectionRef={ServiceThree}
-        visible={visibleSections.includes(ServiceThree.current)}
-        index={4}
-        title="Threat Hunting"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
-        buttonText="View Service"
-        buttonLink="/services/slice"
-        model={{
-          type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
-          textures: [
-            {
-              srcSet: [sliceTexture, sliceTextureLarge],
-              placeholder: sliceTexturePlaceholder,
-            },
-          ],
-        }}
-      />
-      <ServiceSummary
-        id="service-5"
-        sectionRef={ServiceThree}
-        visible={visibleSections.includes(ServiceThree.current)}
-        index={3}
-        title="Training & Awareness"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
-        buttonText="View Service"
-        buttonLink="/services/slice"
-        model={{
-          type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
-          textures: [
-            {
-              srcSet: [sliceTexture, sliceTextureLarge],
-              placeholder: sliceTexturePlaceholder,
-            },
-          ],
-        }}
-      />
-      <ServiceSummary
-        id="service-3"
-        alternate
-        sectionRef={ServiceThree}
-        visible={visibleSections.includes(ServiceThree.current)}
-        index={3}
-        title="Bug Bounty Program Management"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
-        buttonText="View Service"
-        buttonLink="/services/slice"
-        model={{
-          type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
-          textures: [
-            {
-              srcSet: [sliceTexture, sliceTextureLarge],
-              placeholder: sliceTexturePlaceholder,
-            },
-          ],
-        }}
       />
       <Footer />
     </div>

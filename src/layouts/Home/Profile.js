@@ -58,10 +58,10 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 secondary
                 className={styles.button}
                 data-visible={visible}
-                href="/contact"
+                href="https://www.linkedin.com/in/diogo-salvador"
                 icon="send"
               >
-                Send me a message
+                LinkedIn
               </Button>
             </div>
             <div className={styles.column}>

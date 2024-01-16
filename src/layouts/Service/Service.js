@@ -9,6 +9,7 @@ import { useParallax } from 'hooks';
 import { forwardRef, useRef } from 'react';
 import { classes, cssProps, msToNum, numToMs } from 'utils/style';
 import styles from './Service.module.css';
+import { Fragment } from 'react';
 
 const initDelay = 300;
 
@@ -119,7 +120,7 @@ export const ServiceBackground = ({ opacity = 0.7, className, ...rest }) => {
           data-visible={visible}
         >
           <div className={styles.backgroundImageElement} ref={imageRef}>
-            <Image alt="" role="presentation" {...rest} />
+            <Image alt="Presentation 4" role="presentation" {...rest} />
           </div>
           <div className={styles.backgroundScrim} style={cssProps({ opacity })} />
         </div>
@@ -142,14 +143,37 @@ export const ServiceSectionContent = ({ className, width = 'l', ...rest }) => (
   />
 );
 
-export const ServiceSectionHeading = ({ className, level = 3, as = 'h2', ...rest }) => (
-  <Heading
-    className={classes(styles.sectionHeading, className)}
-    as={as}
-    level={level}
-    align="auto"
-    {...rest}
-  />
+const as = "";
+const level = 1;
+const align = 'auto';
+const weight = 'medium';
+const clampedLevel = Math.min(Math.max(level, 0), 5);
+const Component = as || `h${Math.max(clampedLevel, 1)}`;
+import { Divider } from 'components/Divider';
+export const ServiceSectionHeading = ({ className, level = 3, as = 'h2',indexText,visible,titleId, ...rest }) => (
+  /**/
+  <Fragment>
+      <Heading
+        className={classes(styles.sectionHeading, className)}
+        as={as}
+        level={level}
+        align="auto"
+        {...rest}
+      />
+        <Divider
+          notchWidth="64px"
+          notchHeight="8px"
+        ><span className={styles.indexNumber} > {indexText} </span></Divider>
+        
+      <Heading
+        level={3}
+        as="h2"
+        className={styles.title}
+        data-visible={visible}
+        id={titleId}
+      >
+      </Heading>
+    </Fragment>
 );
 
 export const ServiceSectionText = ({ className, ...rest }) => (

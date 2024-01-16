@@ -46,7 +46,7 @@ export const Post = ({ children, title, date, abstract, banner, timecode, ogImag
                 role="presentation"
                 src={{ src: banner }}
                 placeholder={{ src: `${banner.split('.')[0]}-placeholder.jpg` }}
-                alt=""
+                alt="Presentation 3"
               />
             </div>
             <div className={styles.bannerImageBlur}>
@@ -54,7 +54,7 @@ export const Post = ({ children, title, date, abstract, banner, timecode, ogImag
                 role="presentation"
                 src={{ src: `${banner.split('.')[0]}-placeholder.jpg` }}
                 placeholder={{ src: `${banner.split('.')[0]}-placeholder.jpg` }}
-                alt=""
+                alt="Presentation 2"
               />
             </div>
           </div>

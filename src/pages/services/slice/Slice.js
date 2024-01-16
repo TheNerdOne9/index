@@ -133,7 +133,7 @@ export const Slice = () => {
                 <Image
                   srcSet={[sliceBackgroundBar, sliceBackgroundBarLarge]}
                   placeholder={sliceBackgroundBarPlaceholder}
-                  alt=""
+                  alt="Background Slice"
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
                 />

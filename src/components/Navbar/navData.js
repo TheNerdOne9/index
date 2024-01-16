@@ -6,8 +6,7 @@ export const navLinks = [
   },
   {
     label: 'Services',
-    /*pathname: '/#service-1',*/
-    pathname: '/'
+    pathname: '/services'
   },
   {
     label: 'Blog',

@@ -64,7 +64,7 @@ const ArticlesPost = ({
             play={!reduceMotion ? hovered : undefined}
             src={{ src: banner }}
             placeholder={{ src: `${banner.split('.')[0]}-placeholder.jpg` }}
-            alt=""
+            alt="Presentation 5"
             role="presentation"
           />
         </div>

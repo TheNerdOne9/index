@@ -12,6 +12,7 @@ import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { cssProps, media } from 'utils/style';
 import styles from './ServiceSummary.module.css';
+import { Image } from 'components/Image';
 
 const Model = dynamic(() => import('components/Model').then(mod => mod.Model));
 
@@ -145,6 +146,8 @@ export const ServiceSummary = ({
     </div>
   );
 
+
+  /*Services Summary with 3D models*/ 
   return (
     <Section
       className={styles.summary}

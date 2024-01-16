@@ -197,7 +197,7 @@ const ImageElements = ({
           height={placeholder.height}
           onTransitionEnd={() => setShowPlaceholder(false)}
           decoding="async"
-          alt=""
+          alt="Presentation 1"
           role="presentation"
         />
       )}

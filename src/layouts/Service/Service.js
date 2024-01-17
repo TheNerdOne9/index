@@ -143,12 +143,6 @@ export const ServiceSectionContent = ({ className, width = 'l', ...rest }) => (
   />
 );
 
-const as = "";
-const level = 1;
-const align = 'auto';
-const weight = 'medium';
-const clampedLevel = Math.min(Math.max(level, 0), 5);
-const Component = as || `h${Math.max(clampedLevel, 1)}`;
 import { Divider } from 'components/Divider';
 export const ServiceSectionHeading = ({ className, level = 3, as = 'h2',indexText,visible,titleId, ...rest }) => (
   /**/

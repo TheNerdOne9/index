@@ -1,5 +1,3 @@
-import usesBackgroundPlaceholder from 'assets/uses-background-placeholder.jpg';
-import usesBackground from 'assets/uses-background.mp4';
 import { Footer } from 'components/Footer';
 import { Meta } from 'components/Meta';
 import { Image } from 'components/Image';
@@ -7,13 +5,11 @@ import {
   ServiceBackground,
   ServiceContainer,
   ServiceHeader,
-  ServiceImage,
   ServiceSection,
   ServiceSectionColumns,
   ServiceSectionContent,
   ServiceSectionHeading,
   ServiceSectionText,
-  ServiceTextRow,
 } from 'layouts/Service';
 import { Fragment } from 'react';
 import styles from './Services.module.css';
@@ -41,7 +37,6 @@ import threatSidebarLayersLarge from 'assets/target.png';
 
 export const Services = () => {
   const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA4_KEY;
-  const roles = ['Red Team', 'DevSecOps',  'Penetration Test', 'Threat Hunting', 'Awareness'];
   return (
     <Fragment>
       <Meta
@@ -80,7 +75,7 @@ export const Services = () => {
             <div className={styles.imagesText}>
               <ServiceSectionHeading>Red Team</ServiceSectionHeading>
               <ServiceSectionText>
-              Empower your organization's cybersecurity posture with a comprehensive red team service, meticulously simulating real-world attacks to identify and fortify critical vulnerabilities before genuine threats can exploit them from the internet.
+              Empower your organization&apos;s cybersecurity posture with a comprehensive red team service, meticulously simulating real-world attacks to identify and fortify critical vulnerabilities before genuine threats can exploit them from the internet.
               </ServiceSectionText>
             </div>
             <div className={styles.sidebarImages}>
@@ -157,7 +152,7 @@ export const Services = () => {
             <div className={styles.imagesText}>
               <ServiceSectionHeading>Awareness</ServiceSectionHeading>
               <ServiceSectionText>
-              Elevate your organization's cybersecurity posture with a proactive awareness service, conducting customized training programs and simulated phishing exercises to educate your employees about the latest techniques, fostering a culture of cybersecurity vigilance, and safeguarding your organization from costly data breaches and cyberattacks.
+              Elevate your organization&apos;s cybersecurity posture with a proactive awareness service, conducting customized training programs and simulated phishing exercises to educate your employees about the latest techniques, fostering a culture of cybersecurity vigilance, and safeguarding your organization from costly data breaches and cyberattacks.
               </ServiceSectionText>
             </div>
             <div className={styles.sidebarImages}>

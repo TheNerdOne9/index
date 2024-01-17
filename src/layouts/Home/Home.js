@@ -16,9 +16,6 @@ export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
   const [scrollIndicatorHidden, setScrollIndicatorHidden] = useState(false);
   const intro = useRef();
-  const ServiceOne = useRef();
-  const ServiceTwo = useRef();
-  const ServiceThree = useRef();
   const details = useRef();
 
   useEffect(() => {

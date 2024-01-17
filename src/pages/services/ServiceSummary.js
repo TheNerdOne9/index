@@ -12,7 +12,6 @@ import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { cssProps, media } from 'utils/style';
 import styles from './ServiceSummary.module.css';
-import { Image } from 'components/Image';
 
 const Model = dynamic(() => import('components/Model').then(mod => mod.Model));
 

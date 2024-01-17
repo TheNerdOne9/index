@@ -20,17 +20,12 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-    In the vast expanse of cyberspace, I&apos;m the mischievous elf, the code-wielding maestro, the cybersecurity whiz who turns vulnerabilities into punchlines. I&apos;m a certified cybersecurity consultant with a knack for transforming digital defenses into impenetrable fortresses, all while cracking jokes with the same proficiency I crack codes.
-    </Text>
+    I'm Diogo, better known as GhostPwner, and I am a cyber security consultant/ethical hacker with around 8 years of experience. During this short career, I have worked in a consultancy company where I audited and helped multiple companies in different sectors to reinforce the cybersecurity of their businesses.    </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-    As a DevSecOps enthusiast, I&apos;ll weave security enchantments into your development processes, ensuring your systems are magically immune to cyber threats from the very start. My red team expertise is as meticulously as a ninja to probe your defenses, exposing every chink in your armor before the real hackers do.
-    </Text>
+    As a beginner, I naturally had to go through the various areas of cybersecurity where I gained a lot of experience and recently accepted a bigger challenge, in a company with international exposure and with another maturity in the area, demanding more from me. To reach this level I naturally had to make some choices, abandoning the software development area and enrolling in a cyber security master's degree. Later, with more certainty about the path to take, I also had the opportunity to obtain specialized certifications in the various areas of cybersecurity.     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-    Penetration testing? It&apos;s my playground. I&apos;ll relentlessly attack your systems, exposing every weakness and vulnerability, leaving you with a comprehensive roadmap for fortification that&apos;s as hilarious as it is effective. My training programs are designed to transform mere mortals into cybersecurity superheroes, equipping them with the knowledge and skills to protect their digital kingdoms from the clutches of cyber villains.
-    </Text>
-    <Text className={styles.description} data-visible={visible} size="l" as="p">
-But wait, there&apos;s more! I&apos;m also launching my freelancing service, bringing my cybersecurity expertise to your doorstep. Whether you&apos;re a small business or a large enterprise, I&apos;m ready to help you secure your digital realm with a dash of geeky humor and a whole lot of cybersecurity prowess. So, don&apos;t let hackers laugh their way to your digital bank account – contact me today and let&apos;s turn the tables on those cyber-bullies! 
-    </Text>
+      Feel free to connect with me and learn a bit more about my journey.
+      </Text>
   </Fragment>
 );
 

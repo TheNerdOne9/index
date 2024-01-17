@@ -61,9 +61,9 @@ export const Contact = () => {
               data-status={status}
               style={getDelay(tokens.base.durationXS, initDelay, 0.4)}
             />
-              <Text> In today&apos;s interconnected world, cybersecurity is more important than ever and i can help you assess your current security posture, identify vulnerabilities, and implement effective security measures to protect 
-                your business from cyberattacks. Whether you&apos;re a small business or a large enterprise, i have the resources needed to help you safeguard your data and systems.</Text>
-                <Text> Let&apos;s get in touch.</Text>
+              <div><Text> In today&apos;s interconnected world, cybersecurity is more important than ever and i can help you assess your current security posture, identify vulnerabilities, and implement effective security measures to protect 
+                your business from cyberattacks. Whether you&apos;re a small business or a large enterprise, let me help you by sharing the knowledge and finding the right solutions to you.</Text>
+                </div>
             <Transition in={statusError} timeout={msToNum(tokens.base.durationM)}>
               {errorStatus => (
                 <div

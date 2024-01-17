@@ -22,9 +22,6 @@ import { randomBytes } from 'crypto';
 const nonce = randomBytes(128).toString('base64');
 /*Service Images*/
 import { media } from 'utils/style';
-import backBackgroundBarLarge from 'assets/back-background-bar-large.jpg';
-import backBackgroundBarPlaceholder from 'assets/back-background-bar-placeholder.jpg';
-import backBackgroundBar from 'assets/back-background-bar.jpg';
 import backBackgroundLarge from 'assets/back-background-large.jpg';
 import backBackgroundPlaceholder from 'assets/back-background-placeholder.jpg';
 import backBackground from 'assets/back-background.jpg';
@@ -41,14 +38,6 @@ import penSidebarLayersLarge from 'assets/pen-sidebar-layers-large.png';
 import penSidebarLayersPlaceholder from 'assets/pen-sidebar-layers.png';
 import penSidebarLayers from 'assets/pen-sidebar-layers.png';
 import threatSidebarLayersLarge from 'assets/target.png';
-import threatSidebarLayersPlaceholder from 'assets/threat-sidebar-layers.png';
-import threatSidebarLayers from 'assets/threat-sidebar-layers.png';
-import sliceSidebarLayersLarge from 'assets/slice-sidebar-layers-large.png';
-import sliceSidebarLayersPlaceholder from 'assets/slice-sidebar-layers-placeholder.png';
-import sliceSidebarLayers from 'assets/slice-sidebar-layers.png';
-import persons from 'assets/persons.png';
-import server from 'assets/server.png';
-import servers from 'assets/servers.png';
 
 export const Services = () => {
   const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA4_KEY;
@@ -56,7 +45,7 @@ export const Services = () => {
   return (
     <Fragment>
       <Meta
-        title="Services"
+        title="Freelancing"
         description="A list of hardware and software I use to do my thing"
       />
       <Script
@@ -80,9 +69,9 @@ export const Services = () => {
           opacity={0.8}
         />
         <ServiceHeader
-          title="Services"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum semper quam, sed efficitur enim faucibus vitae. Sed egestas, lectus ac scelerisque semper, lectus mauris semper eros, ac faucibus quam lectus non quam. Aenean euismod quam nec justo faucibus, ac semper lectus semper. Aliquam auctor quam ac lectus semper, sit amet ultrices mauris scelerisque. Donec euismod, quam vitae tincidunt faucibus, lectus lectus feugiat nisi, nec faucibus eros enim ac quam. Sed ullamcorper, lectus ac sodales semper, quam mauris tincidunt tellus, ac semper enim eros sed eros."
-          roles={roles}
+          title="Freelancing Services"
+          description="With all this adventure in the area of cybersecurity and with the experience gained, I feel that I must return some of this knowledge to the community, especially the Portuguese one where i came from, through my blog and work to improve the maturity of companies with fewer resources or knowledge with a closer and uncomplicated relationship. For this reason, I present some of the areas in which I have acquired skills and in which I am available to work with you to secure your business."
+
         />
         <ServiceSection padding="top">
         </ServiceSection>
@@ -91,7 +80,7 @@ export const Services = () => {
             <div className={styles.imagesText}>
               <ServiceSectionHeading>Red Team</ServiceSectionHeading>
               <ServiceSectionText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum semper quam, sed efficitur enim faucibus vitae. Sed egestas, lectus ac scelerisque semper, lectus mauris semper eros, ac faucibus quam lectus non quam. Aenean euismod quam nec justo faucibus, ac semper lectus semper. Aliquam auctor quam ac lectus semper, sit amet ultrices mauris scelerisque. Donec euismod, quam vitae tincidunt faucibus, lectus lectus feugiat nisi, nec faucibus eros enim ac quam. Sed ullamcorper, lectus ac sodales semper, quam mauris tincidunt tellus, ac semper enim eros sed eros.
+              Empower your organization's cybersecurity posture with a comprehensive red team service, meticulously simulating real-world attacks to identify and fortify critical vulnerabilities before genuine threats can exploit them from the internet.
               </ServiceSectionText>
             </div>
             <div className={styles.sidebarImages}>
@@ -120,7 +109,7 @@ export const Services = () => {
             <div className={styles.gridText}>
               <ServiceSectionHeading>DevSecOps</ServiceSectionHeading>
               <ServiceSectionText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum semper quam, sed efficitur enim faucibus vitae. Sed egestas, lectus ac scelerisque semper, lectus mauris semper eros, ac faucibus quam lectus non quam. Aenean euismod quam nec justo faucibus, ac semper lectus semper. Aliquam auctor quam ac lectus semper, sit amet ultrices mauris scelerisque. Donec euismod, quam vitae tincidunt faucibus, lectus lectus feugiat nisi, nec faucibus eros enim ac quam. Sed ullamcorper, lectus ac sodales semper, quam mauris tincidunt tellus, ac semper enim eros sed eros.
+              Securely streamline your software development process with a comprehensive DevSecOps service, strategically integrating security practices throughout the lifecycle to enhance your cybersecurity posture and safeguard your digital assets from cyberattacks.
               </ServiceSectionText>
             </div>
           </ServiceSectionContent>
@@ -131,8 +120,7 @@ export const Services = () => {
             <div className={styles.gridText}>
               <ServiceSectionHeading>Penetration Testing</ServiceSectionHeading>
               <ServiceSectionText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum semper quam, sed efficitur enim faucibus vitae. Sed egestas, lectus ac scelerisque semper, lectus mauris semper eros, ac faucibus quam lectus non quam. Aenean euismod quam nec justo faucibus, ac semper lectus semper. Aliquam auctor quam ac lectus semper, sit amet ultrices mauris scelerisque. Donec euismod, quam vitae tincidunt faucibus, lectus lectus feugiat nisi, nec faucibus eros enim ac quam. Sed ullamcorper, lectus ac sodales semper, quam mauris tincidunt tellus, ac semper enim eros sed eros.
-              </ServiceSectionText>
+              Secure your network from potential breaches with a proactive internal assessment service, identifying and eliminating security gaps before they can be exposed.              </ServiceSectionText>
             </div>
             <div className={styles.sidebarImages}>
               <Image
@@ -160,8 +148,7 @@ export const Services = () => {
             <div className={styles.gridText}>
               <ServiceSectionHeading>Threat Hunting</ServiceSectionHeading>
               <ServiceSectionText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum semper quam, sed efficitur enim faucibus vitae. Sed egestas, lectus ac scelerisque semper, lectus mauris semper eros, ac faucibus quam lectus non quam. Aenean euismod quam nec justo faucibus, ac semper lectus semper. Aliquam auctor quam ac lectus semper, sit amet ultrices mauris scelerisque. Donec euismod, quam vitae tincidunt faucibus, lectus lectus feugiat nisi, nec faucibus eros enim ac quam. Sed ullamcorper, lectus ac sodales semper, quam mauris tincidunt tellus, ac semper enim eros sed eros.
-              </ServiceSectionText>
+              Protect your organization from threat actors with a comprehensive threat hunting and darkweb monitoring services, proactively identifying and neutralizing threats that may be lurking in the hidden corners of the internet.              </ServiceSectionText>
             </div>
           </ServiceSectionContent>
         </ServiceSection>
@@ -170,7 +157,7 @@ export const Services = () => {
             <div className={styles.imagesText}>
               <ServiceSectionHeading>Awareness</ServiceSectionHeading>
               <ServiceSectionText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum semper quam, sed efficitur enim faucibus vitae. Sed egestas, lectus ac scelerisque semper, lectus mauris semper eros, ac faucibus quam lectus non quam. Aenean euismod quam nec justo faucibus, ac semper lectus semper. Aliquam auctor quam ac lectus semper, sit amet ultrices mauris scelerisque. Donec euismod, quam vitae tincidunt faucibus, lectus lectus feugiat nisi, nec faucibus eros enim ac quam. Sed ullamcorper, lectus ac sodales semper, quam mauris tincidunt tellus, ac semper enim eros sed eros..
+              Elevate your organization's cybersecurity posture with a proactive awareness service, conducting customized training programs and simulated phishing exercises to educate your employees about the latest techniques, fostering a culture of cybersecurity vigilance, and safeguarding your organization from costly data breaches and cyberattacks.
               </ServiceSectionText>
             </div>
             <div className={styles.sidebarImages}>

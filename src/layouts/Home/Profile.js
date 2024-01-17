@@ -20,9 +20,9 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-    I&apos;m Diogo, better known as GhostPwner, and I am a cyber security consultant/ethical hacker with around 8 years of experience. During this short career, I have worked in a consultancy company where I audited and helped multiple companies in different sectors to reinforce the cybersecurity of their businesses.    </Text>
+    I&apos;m Diogo, better known as GhostPwner, and I am a cybersecurity consultant/ethical hacker with around 8 years of experience. During this short career, I have worked in a consultancy company where I audited and helped multiple companies in different sectors to reinforce the cybersecurity of their businesses.    </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-    As a beginner, I naturally had to go through the various areas of cybersecurity where I gained a lot of experience and recently accepted a bigger challenge, in a company with international exposure and with another maturity in the area, demanding more from me. To reach this level I naturally had to make some choices, abandoning the software development area and enrolling in a cyber security masterback&apos;s degree. Later, with more certainty about the path to take, I also had the opportunity to obtain specialized certifications in the various areas of cybersecurity.     </Text>
+    As a beginner, I naturally had to go through the various areas of cybersecurity where I gained a lot of experience and recently accepted a bigger challenge, in a company with international exposure and with another maturity in the area, demanding more from me. To reach this level I naturally had to make some choices, abandoning the software development area and enrolling in a cybersecurity master&apos;s degree. Later, with more certainty about the path to take, I also had the opportunity to obtain specialized certifications in the various areas of cybersecurity.     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       Feel free to connect with me and learn a bit more about my journey.
       </Text>

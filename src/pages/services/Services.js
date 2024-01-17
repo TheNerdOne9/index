@@ -40,12 +40,15 @@ import phiSidebarLayers from 'assets/phi-sidebar-layers-small.png';
 import penSidebarLayersLarge from 'assets/pen-sidebar-layers-large.png';
 import penSidebarLayersPlaceholder from 'assets/pen-sidebar-layers.png';
 import penSidebarLayers from 'assets/pen-sidebar-layers.png';
-import threatSidebarLayersLarge from 'assets/threat-sidebar-layers-large.png';
+import threatSidebarLayersLarge from 'assets/target.png';
 import threatSidebarLayersPlaceholder from 'assets/threat-sidebar-layers.png';
 import threatSidebarLayers from 'assets/threat-sidebar-layers.png';
 import sliceSidebarLayersLarge from 'assets/slice-sidebar-layers-large.png';
 import sliceSidebarLayersPlaceholder from 'assets/slice-sidebar-layers-placeholder.png';
 import sliceSidebarLayers from 'assets/slice-sidebar-layers.png';
+import persons from 'assets/persons.png';
+import server from 'assets/server.png';
+import servers from 'assets/servers.png';
 
 export const Services = () => {
   const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA4_KEY;
@@ -90,18 +93,8 @@ export const Services = () => {
               <ServiceSectionText>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum semper quam, sed efficitur enim faucibus vitae. Sed egestas, lectus ac scelerisque semper, lectus mauris semper eros, ac faucibus quam lectus non quam. Aenean euismod quam nec justo faucibus, ac semper lectus semper. Aliquam auctor quam ac lectus semper, sit amet ultrices mauris scelerisque. Donec euismod, quam vitae tincidunt faucibus, lectus lectus feugiat nisi, nec faucibus eros enim ac quam. Sed ullamcorper, lectus ac sodales semper, quam mauris tincidunt tellus, ac semper enim eros sed eros.
               </ServiceSectionText>
-              <ServiceSectionText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum semper quam, sed efficitur enim faucibus vitae. Sed egestas, lectus ac scelerisque semper, lectus mauris semper eros, ac faucibus quam lectus non quam. Aenean euismod quam nec justo faucibus, ac semper lectus semper. Aliquam auctor quam ac lectus semper, sit amet ultrices mauris scelerisque. Donec euismod, quam vitae tincidunt faucibus, lectus lectus feugiat nisi, nec faucibus eros enim ac quam. Sed ullamcorper, lectus ac sodales semper, quam mauris tincidunt tellus, ac semper enim eros sed eros.
-              </ServiceSectionText>
             </div>
             <div className={styles.sidebarImages}>
-              <Image
-                className={styles.sidebarImage}
-                srcSet={[sliceSidebarLayers, sliceSidebarLayersLarge]}
-                placeholder={sliceSidebarLayersPlaceholder}
-                alt="The layers sidebar design, now with user profiles."
-                sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
-              />
               <Image
                 className={styles.sidebarImage}
                 srcSet={[backSidebarLayers, backSidebarLayersLarge]}
@@ -113,31 +106,35 @@ export const Services = () => {
           </ServiceSectionColumns>
         </ServiceSection>
         <ServiceSection light>
-          <ServiceSectionContent>
-            <ServiceTextRow>
+        <ServiceSectionContent className={styles.grid}>
+          <div className={styles.sidebarImages}>
+              
+              <Image
+                className={styles.sidebarImage1}
+                srcSet={[devSidebarLayers, devSidebarLayersLarge]}
+                placeholder={devSidebarLayersPlaceholder}
+                alt="The layers sidebar design, now with user profiles."
+                sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
+              />
+            </div>
+            <div className={styles.gridText}>
               <ServiceSectionHeading>DevSecOps</ServiceSectionHeading>
               <ServiceSectionText>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum semper quam, sed efficitur enim faucibus vitae. Sed egestas, lectus ac scelerisque semper, lectus mauris semper eros, ac faucibus quam lectus non quam. Aenean euismod quam nec justo faucibus, ac semper lectus semper. Aliquam auctor quam ac lectus semper, sit amet ultrices mauris scelerisque. Donec euismod, quam vitae tincidunt faucibus, lectus lectus feugiat nisi, nec faucibus eros enim ac quam. Sed ullamcorper, lectus ac sodales semper, quam mauris tincidunt tellus, ac semper enim eros sed eros.
               </ServiceSectionText>
-            </ServiceTextRow>
-            <Image
-              srcSet={[devSidebarLayers, devSidebarLayersLarge]}
-              placeholder={devSidebarLayersPlaceholder}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
-              sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
-            />
+            </div>
           </ServiceSectionContent>
         </ServiceSection>
-        <ServiceSection padding="top">
+        <ServiceSection padding="top"  >
           <ServiceSectionContent className={styles.grid}>
-          <div className={styles.sidebarImages}>
-              <Image
-                className={styles.sidebarImage}
-                srcSet={[sliceSidebarLayers, sliceSidebarLayersLarge]}
-                placeholder={sliceSidebarLayersPlaceholder}
-                alt="The layers sidebar design, now with user profiles."
-                sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
-              />
+          
+            <div className={styles.gridText}>
+              <ServiceSectionHeading>Penetration Testing</ServiceSectionHeading>
+              <ServiceSectionText>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum semper quam, sed efficitur enim faucibus vitae. Sed egestas, lectus ac scelerisque semper, lectus mauris semper eros, ac faucibus quam lectus non quam. Aenean euismod quam nec justo faucibus, ac semper lectus semper. Aliquam auctor quam ac lectus semper, sit amet ultrices mauris scelerisque. Donec euismod, quam vitae tincidunt faucibus, lectus lectus feugiat nisi, nec faucibus eros enim ac quam. Sed ullamcorper, lectus ac sodales semper, quam mauris tincidunt tellus, ac semper enim eros sed eros.
+              </ServiceSectionText>
+            </div>
+            <div className={styles.sidebarImages}>
               <Image
                 className={styles.sidebarImage}
                 srcSet={[penSidebarLayers, penSidebarLayersLarge]}
@@ -146,28 +143,26 @@ export const Services = () => {
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
             </div>
-            <div className={styles.gridText}>
-              <ServiceSectionHeading>Penetration Testing</ServiceSectionHeading>
-              <ServiceSectionText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum semper quam, sed efficitur enim faucibus vitae. Sed egestas, lectus ac scelerisque semper, lectus mauris semper eros, ac faucibus quam lectus non quam. Aenean euismod quam nec justo faucibus, ac semper lectus semper. Aliquam auctor quam ac lectus semper, sit amet ultrices mauris scelerisque. Donec euismod, quam vitae tincidunt faucibus, lectus lectus feugiat nisi, nec faucibus eros enim ac quam. Sed ullamcorper, lectus ac sodales semper, quam mauris tincidunt tellus, ac semper enim eros sed eros.
-              </ServiceSectionText>
-            </div>
           </ServiceSectionContent>
         </ServiceSection>
         <ServiceSection light>
-          <ServiceSectionContent>
-            <ServiceTextRow>
+        <ServiceSectionContent className={styles.grid}>
+          <div className={styles.sidebarImages}>
+              
+              <Image
+                className={styles.sidebarImage1}
+                srcSet={[threatSidebarLayersLarge, threatSidebarLayersLarge]}
+                placeholder={threatSidebarLayersLarge}
+                alt="The layers sidebar design, now with user profiles."
+                sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
+              />
+            </div>
+            <div className={styles.gridText}>
               <ServiceSectionHeading>Threat Hunting</ServiceSectionHeading>
               <ServiceSectionText>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum semper quam, sed efficitur enim faucibus vitae. Sed egestas, lectus ac scelerisque semper, lectus mauris semper eros, ac faucibus quam lectus non quam. Aenean euismod quam nec justo faucibus, ac semper lectus semper. Aliquam auctor quam ac lectus semper, sit amet ultrices mauris scelerisque. Donec euismod, quam vitae tincidunt faucibus, lectus lectus feugiat nisi, nec faucibus eros enim ac quam. Sed ullamcorper, lectus ac sodales semper, quam mauris tincidunt tellus, ac semper enim eros sed eros.
               </ServiceSectionText>
-            </ServiceTextRow>
-            <Image
-              srcSet={[threatSidebarLayers, threatSidebarLayersLarge]}
-              placeholder={threatSidebarLayersPlaceholder}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
-              sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
-            />
+            </div>
           </ServiceSectionContent>
         </ServiceSection>
         <ServiceSection>
@@ -177,18 +172,8 @@ export const Services = () => {
               <ServiceSectionText>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum semper quam, sed efficitur enim faucibus vitae. Sed egestas, lectus ac scelerisque semper, lectus mauris semper eros, ac faucibus quam lectus non quam. Aenean euismod quam nec justo faucibus, ac semper lectus semper. Aliquam auctor quam ac lectus semper, sit amet ultrices mauris scelerisque. Donec euismod, quam vitae tincidunt faucibus, lectus lectus feugiat nisi, nec faucibus eros enim ac quam. Sed ullamcorper, lectus ac sodales semper, quam mauris tincidunt tellus, ac semper enim eros sed eros..
               </ServiceSectionText>
-              <ServiceSectionText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum semper quam, sed efficitur enim faucibus vitae. Sed egestas, lectus ac scelerisque semper, lectus mauris semper eros, ac faucibus quam lectus non quam. Aenean euismod quam nec justo faucibus, ac semper lectus semper. Aliquam auctor quam ac lectus semper, sit amet ultrices mauris scelerisque. Donec euismod, quam vitae tincidunt faucibus, lectus lectus feugiat nisi, nec faucibus eros enim ac quam. Sed ullamcorper, lectus ac sodales semper, quam mauris tincidunt tellus, ac semper enim eros sed eros.
-              </ServiceSectionText>
             </div>
             <div className={styles.sidebarImages}>
-              <Image
-                className={styles.sidebarImage}
-                srcSet={[sliceSidebarLayers, sliceSidebarLayersLarge]}
-                placeholder={sliceSidebarLayersPlaceholder}
-                alt="The layers sidebar design, now with user profiles."
-                sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
-              />
               <Image
                 className={styles.sidebarImage}
                 srcSet={[phiSidebarLayers, phiSidebarLayersLarge]}

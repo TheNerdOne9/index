@@ -91,7 +91,13 @@ export const Services = () => {
         </ServiceSection>
         <ServiceSection light>
         <ServiceSectionContent className={styles.grid}>
-          <div className={styles.sidebarImages}>
+        <div className={styles.gridText}>
+              <ServiceSectionHeading>DevSecOps</ServiceSectionHeading>
+              <ServiceSectionText>
+              Securely streamline your software development process with a comprehensive DevSecOps service, strategically integrating security practices throughout the lifecycle to enhance your cybersecurity posture and safeguard your digital assets from cyberattacks.
+              </ServiceSectionText>
+            </div>
+            <div className={styles.sidebarImages}>
               
               <Image
                 className={styles.sidebarImage1}
@@ -101,12 +107,7 @@ export const Services = () => {
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
             </div>
-            <div className={styles.gridText}>
-              <ServiceSectionHeading>DevSecOps</ServiceSectionHeading>
-              <ServiceSectionText>
-              Securely streamline your software development process with a comprehensive DevSecOps service, strategically integrating security practices throughout the lifecycle to enhance your cybersecurity posture and safeguard your digital assets from cyberattacks.
-              </ServiceSectionText>
-            </div>
+            
           </ServiceSectionContent>
         </ServiceSection>
         <ServiceSection padding="top"  >
@@ -130,6 +131,11 @@ export const Services = () => {
         </ServiceSection>
         <ServiceSection light>
         <ServiceSectionContent className={styles.grid}>
+        <div className={styles.gridText}>
+              <ServiceSectionHeading>Threat Hunting</ServiceSectionHeading>
+              <ServiceSectionText>
+              Protect your organization from threat actors with a comprehensive threat hunting and darkweb monitoring services, proactively identifying and neutralizing threats that may be lurking in the hidden corners of the internet.              </ServiceSectionText>
+            </div>
           <div className={styles.sidebarImages}>
               
               <Image
@@ -140,11 +146,7 @@ export const Services = () => {
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
             </div>
-            <div className={styles.gridText}>
-              <ServiceSectionHeading>Threat Hunting</ServiceSectionHeading>
-              <ServiceSectionText>
-              Protect your organization from threat actors with a comprehensive threat hunting and darkweb monitoring services, proactively identifying and neutralizing threats that may be lurking in the hidden corners of the internet.              </ServiceSectionText>
-            </div>
+            
           </ServiceSectionContent>
         </ServiceSection>
         <ServiceSection>

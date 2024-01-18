@@ -47,18 +47,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
       <Transition in={visible || focused} timeout={0}>
         {visible => (
           <div className={styles.content}>
-            <div className={styles.column}>
-              <ProfileText visible={visible} titleId={titleId} />
-              <Button
-                secondary
-                className={styles.button}
-                data-visible={visible}
-                href="https://www.linkedin.com/in/diogo-salvador"
-                icon="send"
-              >
-                LinkedIn
-              </Button>
-            </div>
+            
             <div className={styles.column}>
               <div className={styles.tag} aria-hidden>
                 <Divider
@@ -92,7 +81,20 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 </svg>
               </div>
             </div>
+            <div className={styles.column}>
+              <ProfileText visible={visible} titleId={titleId} />
+              <Button
+                secondary
+                className={styles.button}
+                data-visible={visible}
+                href="https://www.linkedin.com/in/diogo-salvador"
+                icon="send"
+              >
+                LinkedIn
+              </Button>
+            </div>
           </div>
+          
         )}
       </Transition>
     </Section>

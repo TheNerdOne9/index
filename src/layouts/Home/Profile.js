@@ -13,6 +13,11 @@ import { Transition } from 'components/Transition';
 import { Fragment, useState } from 'react';
 import { media } from 'utils/style';
 import styles from './Profile.module.css';
+import oscp from 'assets/oscp.png';
+import oswe from 'assets/oswe.png';
+import osep from 'assets/osep.png';
+import crto from 'assets/crto.png';
+import htb from 'assets/htb.png';
 
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
@@ -23,6 +28,43 @@ const ProfileText = ({ visible, titleId }) => (
     I&apos;m Diogo, better known as GhostPwner, and I am a cybersecurity consultant/ethical hacker with around 8 years of experience. During this short career, I have worked in a consultancy company where I audited and helped multiple companies in different sectors to reinforce the cybersecurity of their businesses.    </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
     As a beginner, I naturally had to go through the various areas of cybersecurity where I gained a lot of experience and recently accepted a bigger challenge, in a company with international exposure and with another maturity in the area, demanding more from me. To reach this level I naturally had to make some choices, abandoning the software development area and enrolling in a cybersecurity master&apos;s degree. Later, with more certainty about the path to take, I also had the opportunity to obtain specialized certifications in the various areas of cybersecurity.     </Text>
+    <span>
+      <Image
+                className={styles.certs}
+                srcSet={[oscp, oscp]}
+                placeholder={oscp}
+                alt="OSCP"
+                sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
+              />
+      <Image
+                className={styles.certs}
+                srcSet={[oswe, oswe]}
+                placeholder={oswe}
+                alt="OSWE"
+                sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
+              />
+      <Image
+                className={styles.certsOnGoing}
+                srcSet={[osep, osep]}
+                placeholder={osep}
+                alt="OSEP"
+                sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
+              />
+      <Image
+                className={styles.certsOnGoing}
+                srcSet={[crto, crto]}
+                placeholder={crto}
+                alt="CRTO"
+                sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
+              />
+      <Image
+                className={styles.certs}
+                srcSet={[htb, htb]}
+                placeholder={htb}
+                alt="HTB"
+                sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
+              />
+    </span>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       Feel free to connect with me and learn a bit more about my journey.
       </Text>

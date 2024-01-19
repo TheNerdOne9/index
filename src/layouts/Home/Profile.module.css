@@ -116,6 +116,23 @@
   width: 100%;
 }
 
+.certs {
+  display:inline-block;
+  position: relative;
+  vertical-align: middle;
+  padding: 1%;
+  width: 18%;
+}
+
+.certsOnGoing {
+  display:inline-block;
+  position: relative;
+  vertical-align: middle;
+  padding: 1%;
+  width: 18%;
+  opacity: 40%;
+}
+
 .svg {
   position: absolute;
   right: 0;

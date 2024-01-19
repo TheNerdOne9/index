@@ -10,7 +10,7 @@ export const navLinks = [
   },
   {
     label: 'Blog',
-    pathname: '/articles',
+    pathname: 'https://medium.com/@ghostpwner',
   },
   {
     label: 'Contact',
@@ -31,7 +31,7 @@ export const socialLinks = [
   },
   {
     label: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/diogo-salvador/',
+    url: 'https://www.linkedin.com/in/diogo-salvador',
     icon: 'linkedin',
   },
 ];

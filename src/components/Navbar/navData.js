@@ -10,7 +10,7 @@ export const navLinks = [
   },
   {
     label: 'Blog',
-    pathname: 'https://medium.com/@ghostpwner',
+    pathname: 'https://blog.ghostpwner.xyz/',
   },
   {
     label: 'Contact',
